@@ -1,0 +1,40 @@
+$phone: (
+  "small": (
+    "portrait": 320px,
+    "landscape": 568px,
+  ),
+  "regular": (
+    "portrait": 375px,
+    "landscape": 667px,
+  ),
+  "large": (
+    "portrait": 414px,
+    "landscape": 736px,
+  ),
+);
+$tablet: (
+  "regular": (
+    "portrait": 768px,
+    "landscape": 1024px,
+  ),
+  "large": (
+    "portrait": 1024px,
+    "landscape": 1366px,
+  ),
+);
+$desktop: (
+  "small": 1280px,
+  "regular": 1366px,
+  "large": 1600px,
+);
+$devices: (
+  "phone": $phone,
+  "tablet": $tablet,
+  "desktop": $desktop,
+);
+
+@mixin breakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
